@@ -1,0 +1,28 @@
+package Rotation;
+
+import javax.swing.*;
+
+public class App {
+
+	public static void initWindow() {
+		
+		JFrame window = new JFrame("Rotations");
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Board board = new Input();
+		window.add(board);
+		
+		window.setResizable(false);
+		window.pack();
+		window.setLocationRelativeTo(null);
+		window.setVisible(true);		
+	}
+	
+	public static void main(String args[]) {
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				initWindow();
+			}
+		});
+	}
+}
